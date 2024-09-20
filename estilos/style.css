@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 :root{
     --brancoprincipal: #ffffff;
     --cinzasecundario: #c0c0c0;
     --botaoazul: #167bf7;
     --cordefundo: #00030c;
+    --fonteprincipal: 'Inter';
 }  
 
 *{
@@ -13,14 +16,92 @@
 body {
     background-color: var(--cordefundo);
     color: var(--brancoprincipal);
+    font-family: var(--fonteprincipal);
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .container{
     height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%; /*Separa as colunas pelo tamanho da tela ou seja 50% para um lado
+    50% para o outro */
 }
 
 .principal{
     background-image: url(../imagens/Background.png);
     background-repeat: no-repeat;
     background-size: contain;
+    align-items: center; /*Alinhar itens para o centro*/
+    text-align: center;
+}
+
+.container_caixa{
+    margin: 0 6em; /*Aqui foi feito um espaçamento de 0 para cima e embaixo, e 6em da esquerda para a direita*/
+}
+
+.container_titulo{
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.container_imagem{
+    margin: 1em 0 2em 0; /*1em para cima, 0 para esquerda, 2em para baixo e 0 para direita*/
+}
+
+.container_botao1{
+    background-color: var(--botaoazul);
+    border-radius: 5px;
+    margin-bottom: 1em;
+    padding: 1em;
+    display: block; /*Ele ocupa o espaço inteiro ou seja a tela inteira*/
+    color: var(--brancoprincipal);
+    text-decoration: none;
+}
+
+.container_botao2{
+    background-color: transparent;
+    border: 2px solid var(--brancoprincipal);
+    border-radius: 5px;
+    margin-bottom: 1em;
+    padding: 1em;
+    display: block;
+    color: var(--brancoprincipal);
+    text-decoration: none;
+}
+
+.container_aviso{
+    color: var(--cinzasecundario);
+    font-size: 12px;
+}
+
+.secundario{
+    margin: 0 10em;
+    align-items: center;
+}
+
+.secundario_descricao{
+    padding: 1em;
+}
+
+.secundario_imagem{
+    width: 80%;
+}
+
+.secundario_titulo{
+    margin-bottom: 0.2em;
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--brancoprincipal);
+}
+
+.secundario_paragrafo{
+    color: var(--cinzasecundario);
+}
+
+.secundario_botao1{
+    margin-top: 1em;
+    display: inline-block; /*Aqui transformou o elemento em linha (inline), 
+    mas como não tem mais espaço, ele ficou aonde já havia sido designado,
+    e o block permite utilizarmos o width e o height para darmos tamanho.*/
 }
