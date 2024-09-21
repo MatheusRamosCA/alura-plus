@@ -4,6 +4,7 @@
     --brancoprincipal: #ffffff;
     --cinzasecundario: #c0c0c0;
     --botaoazul: #167bf7;
+    --botaoazulefeito: #3c92fa;
     --cordefundo: #00030c;
     --fonteprincipal: 'Inter';
 }  
@@ -70,6 +71,14 @@ body {
     text-decoration: none;
 }
 
+.container_botao1:hover{
+    background-color: var(--botaoazulefeito);
+}
+
+.container_botao2:hover{
+    background-color: var(--botaoazulefeito);
+}
+
 .container_aviso{
     color: var(--cinzasecundario);
     font-size: 12px;
@@ -104,4 +113,61 @@ body {
     display: inline-block; /*Aqui transformou o elemento em linha (inline), 
     mas como não tem mais espaço, ele ficou aonde já havia sido designado,
     e o block permite utilizarmos o width e o height para darmos tamanho.*/
+}
+
+.dispositivos{
+    text-align: center;
+}
+
+.dispositivos_lista{
+    display: flex; /*Por padrão o display: flex; faz todos os itens se formarem em uma linha*/
+    justify-content: center;
+    margin: 5em 0; /*Uma margem para cima e embaixo sem ser para os lados.*/
+    list-style: none; /*Retira os pontos da lista conforme desejado*/
+
+}
+
+.dispositivos_titulo{
+    color: var(--brancoprincipal);
+    font-size: 45px;
+}
+
+.lista_item{
+    color: var(--brancoprincipal);
+    font-size: 28px;
+}
+
+.rodape{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5em;
+}
+
+.rodape_lista{
+    display: flex;
+    flex-direction: row;
+    margin: 2em 0;
+}
+
+.lista_link{
+    margin: 0.5em;
+    list-style: none;
+}
+
+.lista_link a:hover{
+    color: var(--botaoazul);
+    text-decoration: underline;
+}
+
+.arodape_link{
+    text-decoration: none;
+    color: var(--brancoprincipal)
+}
+
+.rodape_texto{
+    color: var(--cinzasecundario);
+    font-size: 14px;
+    text-align: center;
+    margin: 0.3em 0;
 }
